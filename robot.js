@@ -7,14 +7,15 @@ var path = require('path')
 /**
  *  @desc 爬虫类
  *
- *  @param object  obj          配置参数 
- *  @param string  obj.url      抓取网页地址URL
- *  @param string  obj.saveDir  抓取结果保存目录
- *  @param int     obj.mode     保存目录的权限
- *  @param boolean obj.debug    是否开启调试模式
- *  @param boolean obj.regex    是否开启正则表达式模式
- *  @param string  obj.regexExp 需抓取的正则表达式
- *  @param string  obj.cheerio  是否开启Cheerio模式
+ *  @param object  obj             配置参数 
+ *  @param string  obj.url         抓取网页地址URL
+ *  @param string  obj.saveDir     抓取结果保存目录
+ *  @param int     obj.mode        保存目录的权限
+ *  @param boolean obj.debug       是否开启调试模式
+ *  @param boolean obj.regex       是否开启正则表达式模式
+ *  @param string  obj.regexExp    需抓取的正则表达式
+ *  @param string  obj.cheerio     是否开启Cheerio模式
+ *  @param string  obj.cheerioExp  需抓取的Cheerio表达式
  */
 var Robot = function(obj){
 
