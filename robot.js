@@ -25,6 +25,8 @@ var Robot = function(obj){
 	if(this.regex == true)
 		this.regexExp = obj.regexExp;
 	this.cheerio = obj.cheerio || false;
+	if(this.cheerio == true)
+		this.cheerioExp = obj.cheerioExp;
 	this.mode = obj.mode || 0666;
 }
 
@@ -89,7 +91,7 @@ Robot.prototype.successHandler = function(html){
  *
  *  @param  string  html          抓取网页内容 
  *
- *  @return Array 			      返回抓取结果数组
+ *  @return Array 		  返回抓取结果数组
  */
 Robot.prototype.successHandlerByRegex = function(html){
 	
@@ -122,7 +124,7 @@ Robot.prototype.successHandlerByRegex = function(html){
  *
  *  @param  string  html          抓取网页内容 
  *
- *  @return Array 			      返回抓取结果数组
+ *  @return Array 	          返回抓取结果数组
  */
 Robot.prototype.successHandlerByCheerio = function(html){
 	var $ = cheerio.load(html);
